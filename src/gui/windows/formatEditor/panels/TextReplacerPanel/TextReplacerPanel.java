@@ -4,6 +4,7 @@ package gui.windows.formatEditor.panels.TextReplacerPanel;
 import java.awt.BorderLayout;
 import java.awt.Component;
 import java.awt.Dimension;
+import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.LinkedList;
 
@@ -25,6 +26,8 @@ import gui.windows.formatEditor.panels.TextReplacerPanel.events.RemoveButtonEven
 public class TextReplacerPanel extends JPanel
 {
 	protected JList<TextReplacer> list;
+	
+	
 	public TextReplacerPanel()
 	{
 		this.setBorder(new TitledBorder(null, "Text Replacer", TitledBorder.LEADING, TitledBorder.TOP, null, null));
@@ -118,15 +121,26 @@ public class TextReplacerPanel extends JPanel
 	{
 		DefaultListModel<TextReplacer> listModel = (DefaultListModel<TextReplacer>) list.getModel();
 		
-		int i = 0;
+		format.getReplacers().clear();
 		
-		while(i > listModel.size())
+		Enumeration<TextReplacer> enumeration = listModel.elements();
+		
+		
+		
+		while(enumeration.hasMoreElements())
 		{
-			TextReplacer element = listModel.getElementAt(i);
+			TextReplacer element = enumeration.nextElement();
 			
 			format.setReplaceOrder(element);
+		}
+				
+		Iterator<TextReplacer> iterator = format.getReplacers().iterator();
+		while(iterator.hasNext())
+		{
+			TextReplacer replacer = iterator.next();
 			
-			i++;
+			System.out.println(replacer);
+			
 		}
 	}
 }

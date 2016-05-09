@@ -18,6 +18,7 @@ public class FormatSpecificPanel extends JPanel
 	protected JCheckBox centeredDom;
 	protected JCheckBox newLine;
 	protected JCheckBox hasChildren;
+	protected JCheckBox isHeader;
 	
 	public FormatSpecificPanel()
 	{
@@ -53,6 +54,10 @@ public class FormatSpecificPanel extends JPanel
 		hasChildren = new JCheckBox();
 		propertyPanel = new PropertyPanel("Has Children", hasChildren);
 		this.add(propertyPanel);
+		
+		isHeader = new JCheckBox();
+		propertyPanel = new PropertyPanel("Is header", isHeader);
+		this.add(propertyPanel);
 	}
 	public void updateFormat(Format format)
 	{
@@ -62,6 +67,7 @@ public class FormatSpecificPanel extends JPanel
 		format.setCenteredDom(centeredDom.isSelected());
 		format.setNewLine(newLine.isSelected());
 		format.setHasChildren(hasChildren.isSelected());
+		format.setHeader(isHeader.isSelected());
 	}
 	public void update(Format format)
 	{
@@ -71,6 +77,7 @@ public class FormatSpecificPanel extends JPanel
 		centeredDom.setSelected(format.getCenteredDom());
 		newLine.setSelected(format.getNewLine());
 		hasChildren.setSelected(format.getNewLine());
+		isHeader.setSelected(format.getHeader());
 	}
 	public JTextField getTag()
 	{

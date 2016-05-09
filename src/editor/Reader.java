@@ -16,6 +16,7 @@ public class Reader
 		parentDom = new ArrayList<>();
 	}
 	
+	@SuppressWarnings("unused")
 	protected LinkedList<Dom> buildDivs(String text)
 	{
 		library.setDefaultFormat("/p");
@@ -23,7 +24,7 @@ public class Reader
 		String[] chunks = text.split(" ");
 		
 		Dom currentDom = new Dom("first");
-		IFormat currentFormat = library.getDefault();
+		Format currentFormat = library.getDefault();
 		for(int i = 0; i < chunks.length ; i++)
 		{
 			String chunk = chunks[i];
@@ -88,6 +89,8 @@ public class Reader
 		
 		returnVal.append("<head>\n");
 		
+		
+		
 		//Style
 		
 		returnVal.append("<style>\n");
@@ -100,7 +103,6 @@ public class Reader
 		}
 		
 		returnVal.append("</style>\n");
-		
 		
 		returnVal.append("</head>\n");
 		
@@ -116,6 +118,23 @@ public class Reader
 			returnVal.append(div.getHml());
 		}
 		
+		//Javascript
+		
+		returnVal.append("<script>\n");
+		returnVal.append(library.getJavascriptLibrary().getHeader().getDeclaration());
+		
+		iterator = divs.iterator();
+		
+		while(iterator.hasNext())
+		{
+			Dom div = iterator.next();
+			if(div.getFormat().getHeader())
+			{
+				returnVal.append(library.getJavascriptLibrary().getHeader().getFunctionCall(div) + ";" + "\n");
+			}
+		}
+		
+		returnVal.append("</script>");
 		returnVal.append("</body>\n");
 		return returnVal.toString();
 	}

@@ -31,10 +31,10 @@ public class TextReplacer
 	{
 		StringBuilder builder = new StringBuilder();
 		
-		builder.append(replaced.replaceAll("\n", "[newLine]"));
+		builder.append(replacer.replaceAll("\n", "[newLine]"));
 		builder.append(" > ");
 		
-		builder.append(replacer.replaceAll("\n", "[newLine]"));
+		builder.append(replaced.replaceAll("\n", "[newLine]"));
 		
 		return builder.toString();
 	}

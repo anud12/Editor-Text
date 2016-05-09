@@ -44,20 +44,20 @@ public class BorderWrapperPanel extends JPanel
 		{
 			style.setSelectedIndex(0);
 		}
-		leftWidth.setValue(format.getWrapperDecorator().getBorder().getLeftWidth());
-		rightWidth.setValue(format.getWrapperDecorator().getBorder().getRightWidth());
-		bottomWidth.setValue(format.getWrapperDecorator().getBorder().getBottomWidth());
-		topWidth.setValue(format.getWrapperDecorator().getBorder().getTopWidth());
+		leftWidth.setValue(format.getWrapperDecorator().getBorder().getLeft());
+		rightWidth.setValue(format.getWrapperDecorator().getBorder().getRight());
+		bottomWidth.setValue(format.getWrapperDecorator().getBorder().getBottom());
+		topWidth.setValue(format.getWrapperDecorator().getBorder().getTop());
 		color.setText(format.getWrapperDecorator().getBorder().getColor());
 	}
 	
 	public void updateFormat(Format format)
 	{
 		format.getWrapperDecorator().getBorder().setStyle((String) style.getSelectedItem());
-		format.getWrapperDecorator().getBorder().setLeft(Double.valueOf((String) leftWidth.getValue().toString()));
-		format.getWrapperDecorator().getBorder().setRight(Double.valueOf((String)rightWidth.getValue().toString()));
-		format.getWrapperDecorator().getBorder().setBottom(Double.valueOf((String)bottomWidth.getValue().toString()));
-		format.getWrapperDecorator().getBorder().setTop(Double.valueOf((String)topWidth.getValue().toString()));
+		format.getWrapperDecorator().getBorder().setLeft(Double.valueOf((String) leftWidth.getValue().toString()).intValue());
+		format.getWrapperDecorator().getBorder().setRight(Double.valueOf((String)rightWidth.getValue().toString()).intValue());
+		format.getWrapperDecorator().getBorder().setBottom(Double.valueOf((String)bottomWidth.getValue().toString()).intValue());
+		format.getWrapperDecorator().getBorder().setTop(Double.valueOf((String)topWidth.getValue().toString()).intValue());
 		format.getWrapperDecorator().getBorder().setColor(color.getText().toString());
 	}
 	public BorderWrapperPanel()

@@ -20,8 +20,8 @@ public class EditButtonEvent implements ActionListener
 	protected JCheckBox ignoreFirst = new JCheckBox();
 	
 	protected Object[] message = {
-		    "Find:", replaced,
-		    "Replace:", replacer,
+		    "Find:", replacer,
+		    "Replace:", replaced,
 		    "Ignore duplicate", ignoreDuplicate,
 		    "Ignore first occurence", ignoreFirst
 		};

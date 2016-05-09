@@ -1,14 +1,6 @@
 package editor;
 
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Scanner;
-
-import javax.xml.bind.JAXBException;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerFactoryConfigurationError;
 
 import css.Border;
 import gui.windows.formatEditor.FormatEditor;
@@ -17,24 +9,15 @@ public class Test
 {
 	public static void main(String args[]) throws IOException
 	{
-		File out = new File("library.xml");
 		Library library = new Library();
 		
-		Scanner scanner = new Scanner(new File("in.txt"));
-		String string = "";
-		while(scanner.hasNextLine())
-		{
-			String line = scanner.nextLine();
-						
-			string += line + " \n ";
-		}
-		
 		double fontSize = 16;
+		@SuppressWarnings("unused")
 		Reader reader = new Reader(library);
 		
 		Border debugBorder = new Border();
 		debugBorder.setColor("#DFDFDF");
-		debugBorder.setWidth(0D);
+		debugBorder.setWidth(0);
 		debugBorder.setStyle("Solid");
 		
 		Format format = new Format("/titlu");
@@ -56,7 +39,7 @@ public class Test
 		format.getWrapperDecorator().getBackground().setColor("#00B0FF");
 		format.getFont().setColor("white");
 		
-		format.getWrapperDecorator().getBoxShadow().setHShadow(0);
+		format.getWrapperDecorator().getBoxShadow().sethShadow(0);
 		format.getWrapperDecorator().getBoxShadow().setvShadow(0);
 		format.getWrapperDecorator().getBoxShadow().setBlurDistance(3);
 		format.getWrapperDecorator().getBoxShadow().setSpreadSize(3);
@@ -75,7 +58,7 @@ public class Test
 		
 		format.getWrapperPosition().setzIndex(8);
 		format.getWrapperDecorator().getBorder().setStyle("solid");
-		format.getWrapperDecorator().getBorder().setTop(1D);
+		format.getWrapperDecorator().getBorder().setTop(1);
 		format.getWrapperDecorator().getBorder().setColor("#DDDDDD");
 		format.getWrapperPosition().getMargin().setTopSize(0);
 		format.getWrapperPosition().getMargin().setBottomSize(22);
@@ -154,28 +137,15 @@ public class Test
 		format.getPosition().getPadding().setSize(5);
 		format.getDecorator().getBorder().setColor("#512DA8");
 		format.getDecorator().getBorder().setStyle("dashed");
-		format.getDecorator().getBorder().setLeft(2D);;
+		format.getDecorator().getBorder().setLeft(2);;
 		format.getPosition().getMargin().setLeftSize(25);
 
 		library.addFormat(format);
-
-		try
-		{
-			XMLParser.writeLibrary(out, library);
-		}
-		catch (JAXBException e)
-		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		
 		FormatEditor editor = new FormatEditor();
 		editor.setLibrary(library);
-		File file = new File("test.html");
-		FileWriter stream = new FileWriter(file);
+		editor.refreshList();
 		
-		stream.write(reader.process(string));
-		stream.flush();
 		
 		System.in.read();
 	}

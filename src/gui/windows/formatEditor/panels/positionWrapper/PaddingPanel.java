@@ -24,10 +24,10 @@ public class PaddingPanel extends JPanel
 	}
 	public void updateFormat(Format format)
 	{
-		format.getWrapperPosition().getMargin().setLeftSize((int) leftSize.getValue());
-		format.getWrapperPosition().getMargin().setRightSize((int) rightSize.getValue());
-		format.getWrapperPosition().getMargin().setTopSize((int) topSize.getValue());
-		format.getWrapperPosition().getMargin().setBottomSize((int) bottomSize.getValue());
+		format.getWrapperPosition().getPadding().setLeftSize((int) leftSize.getValue());
+		format.getWrapperPosition().getPadding().setRightSize((int) rightSize.getValue());
+		format.getWrapperPosition().getPadding().setTopSize((int) topSize.getValue());
+		format.getWrapperPosition().getPadding().setBottomSize((int) bottomSize.getValue());
 	}
 	public PaddingPanel()
 	{

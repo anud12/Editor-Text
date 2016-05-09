@@ -1,12 +1,15 @@
 package editor;
 
-import java.util.Collection;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+
+import javascript.JavascriptLibrary;
+import javascript.header.Header;
 
 @XmlRootElement( name = "library")
 public class Library
@@ -17,15 +20,27 @@ public class Library
 	protected int ids;
 	protected String name;
 	protected Reader reader;
-	
+	protected JavascriptLibrary javascriptLibrary;
+
 	public Library()
 	{
 		formats = new HashMap<>();
 		usedFormats = new LinkedHashSet<>();
 		reader = new Reader(this);
-		name = "Not stored on diskw";
+		name = "Not stored on disk";
+		javascriptLibrary = new JavascriptLibrary();
+	}
+	
+	public JavascriptLibrary getJavascriptLibrary()
+	{
+		return javascriptLibrary;
 	}
 
+	public void setJavascriptLibrary(JavascriptLibrary javascriptLibrary)
+	{
+		this.javascriptLibrary = javascriptLibrary;
+	}
+	
 	public Reader getReader()
 	{
 		return reader;
@@ -51,7 +66,7 @@ public class Library
 	{
 		return formats.keySet();
 	}
-	public void addFormat(IFormat format)
+	public void addFormat(Format format)
 	{
 		if(format.getClass() == Format.class)
 		{
@@ -84,7 +99,7 @@ public class Library
 	{
 		formats.remove(key);
 	}
-	public IFormat getFormat(String text)
+	public Format getFormat(String text)
 	{
 		if(formats.containsKey(text))
 		{

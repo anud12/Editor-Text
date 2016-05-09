@@ -12,17 +12,17 @@ public class Border implements CSS
 	protected String style;
 
 	protected String color;
-	protected Double left;
-	protected Double right;
-	protected Double top;
-	protected Double bottom;
+	protected int left;
+	protected int right;
+	protected int top;
+	protected int bottom;
 	
 	public Border()
 	{
-		top = 0D;
-		bottom = 0D;
-		right = 0D;
-		left = 0D;
+		top = 0;
+		bottom = 0;
+		right = 0;
+		left = 0;
 		style = "inherit";
 		color = "inherit";
 	}
@@ -38,26 +38,26 @@ public class Border implements CSS
 		return color;
 	}
 	
-	@XmlElement( name = "leftWidth")
-	public double getLeftWidth()
+	@XmlElement( name = "left")
+	public int getLeft()
 	{
 		return left;
 	}
 	
-	@XmlElement( name = "rightWidth")
-	public double getRightWidth()
+	@XmlElement( name = "right")
+	public int getRight()
 	{
 		return right;
 	}
 
-	@XmlElement( name = "topWidth")
-	public double getTopWidth()
+	@XmlElement( name = "top")
+	public int getTop()
 	{
 		return top;
 	}
 	
-	@XmlElement( name = "bottomWidth")
-	public double getBottomWidth()
+	@XmlElement( name = "bottom")
+	public int getBottom()
 	{
 		return bottom;
 	}
@@ -72,26 +72,26 @@ public class Border implements CSS
 		this.color = color;
 	}
 	
-	public void setWidth(Double width)
+	public void setWidth(int width)
 	{
 		left = width;
 		right = width;
 		top = width;
 		bottom = width;
 	}
-	public void setTop(Double width)
+	public void setTop(int width)
 	{
 		top = width;
 	}
-	public void setBottom(Double width)
+	public void setBottom(int width)
 	{
 		bottom = width;
 	}
-	public void setLeft(Double width)
+	public void setLeft(int width)
 	{
 		left = width;
 	}
-	public void setRight(Double double1)
+	public void setRight(int double1)
 	{
 		right = double1;
 	}

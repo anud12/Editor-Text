@@ -28,7 +28,7 @@ public class BoxShadowPanel extends JPanel
 	public void updateFormat(Format format)
 	{
 		format.getWrapperDecorator().getBoxShadow().setvShadow((int) vShadow.getValue());
-		format.getWrapperDecorator().getBoxShadow().setHShadow((int) hShadow.getValue());
+		format.getWrapperDecorator().getBoxShadow().sethShadow((int) hShadow.getValue());
 		format.getWrapperDecorator().getBoxShadow().setBlurDistance((int) blurDistance.getValue());
 		format.getWrapperDecorator().getBoxShadow().setSpreadSize((int) blurDistance.getValue());
 		format.getWrapperDecorator().getBoxShadow().setColor(color.getText());

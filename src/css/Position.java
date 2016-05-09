@@ -39,6 +39,14 @@ public class Position implements CSS
 	{
 		return padding;
 	}
+	public void setPadding(Padding padding)
+	{
+		this.padding = padding;
+	}
+	public void setMargin(Margin margin)
+	{
+		this.margin = margin;
+	}
 	@Override
 	public List<String> getCSS()
 	{

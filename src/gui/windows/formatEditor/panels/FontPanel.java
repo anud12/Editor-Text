@@ -25,6 +25,7 @@ public class FontPanel extends JPanel
 	protected JCheckBox bold;
 	protected JCheckBox italic;
 	protected JCheckBox underline;
+	protected JTextField color;
 	
 	public void resetFontName()
 	{
@@ -100,6 +101,8 @@ public class FontPanel extends JPanel
 		bold.setSelected(format.getFont().getBold());
 		italic.setSelected(format.getFont().getItalic());
 		underline.setSelected(format.getFont().getUnderline());
+		
+		color.setText(format.getFont().getColor());
 	}
 	public void updateFormat(Format format)
 	{
@@ -111,6 +114,7 @@ public class FontPanel extends JPanel
 		format.getFont().setBold(bold.isSelected());
 		format.getFont().setItalic(italic.isSelected());
 		format.getFont().setUnderLine(underline.isSelected());
+		format.getFont().setColor(color.getText());
 	}
 	public FontPanel()
 	{
@@ -139,6 +143,10 @@ public class FontPanel extends JPanel
 		propertyPanel = new PropertyPanel("Font size", fontSize);
 		this.add(propertyPanel);
 		
+		color = new JTextField();
+		propertyPanel = new PropertyPanel("Color", color);
+		this.add(propertyPanel);
+		
 		bold = new JCheckBox();
 		propertyPanel = new PropertyPanel("Bold", bold);
 		this.add(propertyPanel);
@@ -150,6 +158,8 @@ public class FontPanel extends JPanel
 		underline = new JCheckBox();
 		propertyPanel = new PropertyPanel("Underline", underline);
 		this.add(propertyPanel);
+		
+		
 		
 		this.resetFontName();
 	}

@@ -37,7 +37,7 @@ public class Dom
 	{
 		this.format = format;
 	}
-	public IFormat getFormat()
+	public Format getFormat()
 	{
 		return this.format;
 	}
@@ -50,7 +50,7 @@ public class Dom
 		String returnVal = "";
 		returnVal += "<div ";
 		
-		returnVal += "id = '" + this.id + "' \n";
+		returnVal += "id = 'wrapper-" + this.id + "' \n";
 		returnVal += "format = '" + format.getTag() + "' \n";
 		returnVal += "newLine = '" + format.getNewLine() + "' \n";
 		
@@ -80,6 +80,7 @@ public class Dom
 	{
 		String returnVal = "";		
 		
+		/*
 		if(format.getCenteredDom())
 		{
 			returnVal += createContainerDiv("");
@@ -91,7 +92,15 @@ public class Dom
 				returnVal += createContainerDiv("display : block");
 			}
 		}
-		
+		*/
+		if(format.getNewLine())
+		{
+			returnVal += createContainerDiv("display : block");
+		}
+		else
+		{
+			returnVal += createContainerDiv("");
+		}
 		returnVal += "<"+ format.getDomTag() + "\n";
 		
 		returnVal += "id = '" + this.id + "' \n";
@@ -114,7 +123,7 @@ public class Dom
 		returnVal += text.toString();
 		
 		returnVal += "</" + format.getDomTag() +">\n";
-		
+		/*
 		if(format.getCenteredDom())
 		{
 			returnVal += "</div>\n";
@@ -126,6 +135,8 @@ public class Dom
 				returnVal += "</div>\n";
 			}
 		}
+		*/
+		returnVal += "</div>\n";
 		return returnVal;
 	}
 	

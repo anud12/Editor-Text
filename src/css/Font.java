@@ -29,7 +29,7 @@ public class Font implements CSS
 		bold = false;
 		italic = false;
 		underline = false;
-		center = true;
+		center = false;
 	}
 	@XmlElement( name = "fontFamily")
 	public String getFontFamily()

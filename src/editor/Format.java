@@ -12,7 +12,7 @@ import css.Font;
 import css.Position;
 
 @XmlRootElement( name = "format")
-public class Format implements IFormat
+public class Format
 {	
 	protected String tag;
 	
@@ -23,7 +23,6 @@ public class Format implements IFormat
 	protected Decorator wrapperDecorator;
 	protected Position wrapperPosition;
 	
-	
 	protected boolean centeredDom;
 	protected boolean hidden;
 	protected String preText;
@@ -31,12 +30,12 @@ public class Format implements IFormat
 	protected boolean hasChildren;
 	protected String id;
 	protected String domTag;
+	protected boolean isHeader;
 	
 	protected LinkedList<TextReplacer> replacers;
 	
 	public Format()
 	{
-		this.tag = tag;
 		preText = "";
 		replacers = new LinkedList<TextReplacer>();
 		
@@ -66,6 +65,15 @@ public class Format implements IFormat
 	public LinkedList<TextReplacer> getReplacers()
 	{
 		return replacers;
+	}
+	@XmlElement( name = "header")
+	public boolean getHeader()
+	{
+		return isHeader;
+	}
+	public void setHeader(boolean isHeader)
+	{
+		this.isHeader = isHeader;
 	}
 	@XmlElement( name = "replacers")
 	public void setReplacers(LinkedList<TextReplacer> replacers)
@@ -300,7 +308,6 @@ public class Format implements IFormat
 		
 		return returnVal.toString();
 	}
-	@Override
 	public String processText(String text)
 	{
 		String returnVal = this.preText + " ";

@@ -34,6 +34,7 @@ public class CommitChangesEvent implements ActionListener
 		editor.getPositionWrapperPanel().updateFormat(format);
 		editor.getFormatSpecificPanel().updateFormat(format);
 		editor.getFontPanel().updateFormat(format);
+		editor.getTextReplacerPanel().updateFormat(format);
 		
 		Library library = editor.getFormatLibrary();
 		library.removeFormat(tag);

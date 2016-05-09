@@ -44,19 +44,19 @@ public class BorderPanel extends JPanel
 		{
 			style.setSelectedIndex(0);
 		}
-		leftWidth.setValue(format.getDecorator().getBorder().getLeftWidth());
-		rightWidth.setValue(format.getDecorator().getBorder().getRightWidth());
-		bottomWidth.setValue(format.getDecorator().getBorder().getBottomWidth());
-		topWidth.setValue(format.getDecorator().getBorder().getTopWidth());
+		leftWidth.setValue(format.getDecorator().getBorder().getLeft());
+		rightWidth.setValue(format.getDecorator().getBorder().getRight());
+		bottomWidth.setValue(format.getDecorator().getBorder().getBottom());
+		topWidth.setValue(format.getDecorator().getBorder().getTop());
 		color.setText(format.getDecorator().getBorder().getColor());
 	}
 	public void updateFormat(Format format)
 	{
 		format.getDecorator().getBorder().setStyle((String) style.getSelectedItem());
-		format.getDecorator().getBorder().setLeft(Double.valueOf((String) leftWidth.getValue().toString()));
-		format.getDecorator().getBorder().setRight(Double.valueOf((String)rightWidth.getValue().toString()));
-		format.getDecorator().getBorder().setBottom(Double.valueOf((String)bottomWidth.getValue().toString()));
-		format.getDecorator().getBorder().setTop(Double.valueOf((String)topWidth.getValue().toString()));
+		format.getDecorator().getBorder().setLeft(Double.valueOf((String) leftWidth.getValue().toString()).intValue());
+		format.getDecorator().getBorder().setRight(Double.valueOf((String)rightWidth.getValue().toString()).intValue());
+		format.getDecorator().getBorder().setBottom(Double.valueOf((String)bottomWidth.getValue().toString()).intValue());
+		format.getDecorator().getBorder().setTop(Double.valueOf((String)topWidth.getValue().toString()).intValue());
 		format.getDecorator().getBorder().setColor(color.getText().toString());
 	}
 	public BorderPanel()

@@ -20,7 +20,7 @@ public class BoxShadow implements CSS
 	{
 		color = "black";
 	}
-	public void setHShadow(int hShadow)
+	public void sethShadow(int hShadow)
 	{
 		this.hShadow = hShadow;
 	}

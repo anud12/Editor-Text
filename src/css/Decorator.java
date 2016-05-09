@@ -33,10 +33,18 @@ public class Decorator implements CSS
 	{
 		return boxShadow;
 	}
+	public void setBoxShadow(BoxShadow boxShadow)
+	{
+		this.boxShadow = boxShadow;
+	}
 	@XmlElement( name = "background")
 	public Background getBackground()
 	{
 		return background;
+	}
+	public void setBackground(Background background)
+	{
+		this.background = background;
 	}
 	@Override
 	public List<String> getCSS()
