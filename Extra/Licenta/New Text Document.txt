@@ -1,0 +1,46 @@
+/c Prezentare power point
+/p 20-45 slideuri 
+
+/c Introducere
+/p intre 10 -15 pagini, incerc sa ating urmatoarele idei
+/l importanta subiectului
+descrierea problemei si avantajele ei
+principalul obiectiv de scriere scurta pe capitole (in sensul ca lucrarea este structurata in x capitole)
+pentru fiecare capitol un rezumat de 2-3 randuri
+
+/c Descrierea aplicatiei
+/p intre 10-25 de pagini
+
+/l
+Detalierea, o lista principala de functionalitati
+Analiza aplicatiei
+Usecase
+Diagrama de clase
+Proiectarea aplicatiei (modul in care este creata aplicatiei)
+Technologii (doar enumerat)
+
+/c Prezentarea techonolgiilor folosite in aplicatie
+/p Intre 20-30 de pagini
+/p Pentru fiecare technologie in parte sa fie un capitol, sub capitol
+(Ex pentru java de ce am folosit, avantaje dezavantaje, conmparatie)
+
+/c Aplicatia propriuzisa
+/p intre 30-40 de pagini
+
+/l clase
+utilizarea aplicatiei (tutorial)
+exemple din codul sursa (ex la fie care buton ce se intampla)
+proprietati metode
+
+/c Concluzii
+/p maxim o pagina
+/p 
+
+/c Directii viitoare de dezvoltare
+/p maxim o pagina
+
+/c Anexe
+/p cele mai importante clase in intregime
+
+/c Bibliografie
+/p nu se numeroteaza ca si capitol

@@ -1,0 +1,263 @@
+/titlu Limbaj S
+
+/c Variabile
+
+/l
+var intrare x1,x2...
+var de lucru z1,z2...
+var de iesire y
+/c Instructiuni
+
+/cod
+v <- v+1
+v <- v-1 (sau 0 daca v = 0)
+if v !=  0 goto L
+v <- v
+
+/def Un program se termina in urmatoarele situatii
+
+/l 
+se trece de ultima instructiune
+salt la o eticheta nedefinita
+in final ne intereseaza valoare lui y
+
+/cod
+[A]	x <- x - 1
+	y <- y + 1
+	if x!=0 goto A
+
+/p Pentru x = 1
+/tb 
+|- x | y -|
+|- 1 | 0 -|
+|- 0 | 1 -|
+
+/p Pentru x = 2
+
+/tb
+|- x | y -|
+|- 2 | 0 -|
+|- 1 | 1 -|
+|- 0 | 2 -|
+
+/p Programul calculeaza functia
+f(x) = 	{1 pentru x = 0	
+	{x pentru x > 0
+/cod
+[A]	x <- x + 1
+	if x != 0 goto A
+
+f : multimeVida
+
+/def P este un program in limbajul s
+/def Stare este o functie definita pe V cu valori in N (s : V -> N)
+unde v = multimea variabilelor
+/def Configuratie (i,s)
+i = numarul instructiunii curente ce trebuie executata
+s = starea
+
+/c Cum trecem de la (i,s) la (j,t)
+
+/p Instructuiunea i : 
+/cod
+1)	V <- V + 1
+	j = i+1
+
+t(u) = 	{s(u) pentru u != v
+	{s(v) + 1 u pentru u = v
+
+2) v <- v - 1
+j = i + 1
+t(u) = 	{ s(u) u!= v
+	{ s(v) = 0 daca u = v si s(v) = 0
+	{ s(v) -1 daca u = v si s(v) > 0
+
+3) if v!=0 goto L
+
+j = 	{ i = 1 daca v = 0
+	{ K daca v!= 0 si L exista la instructiunea K
+	{ numarul ultimei instructiuni + 1 daca v != 0 si L nu exista
+
+t(u) = 	{ s(u)
+
+/def f : N ^ k - > N calculabila daca exista program in S astfel incat pentru orce valori de intrare iesirea Y sa fie valori de intrare x1, .... , xk si sa fie f(x1,..,xk)
+/def Este calculabila daca exista algoritm care sa obtina valoarea dorita
+
+
+/titlu Macroinstriuctiuni
+/c Vrem sa existe instructiunea goto L
+
+/cod 
+z <- z + 1
+if z != 0 go to L
+
+/p Macroinstriuctiuni
+/l 
+goto L
+v <- 0
+v <- k
+v <- u
+z <- z1 + z2
+z <- z1 * z2
+z <- f(z1, ... , zk) functie calculabila
+
+/p La fiecare dezvoltare, alte variabile de lucru si alte etichete
+
+/c vrem ca v <- 0
+
+/cod v <- 0
+
+[A] V <- V - 1
+if v != 0 goto A
+
+/c V primeste o valoare K, v <- k
+
+/cod
+v <- k
+
+v <- 0
+v <- v + 1}
+.	  }
+.	  } de K ori
+.	  }
+v <- v + 1}
+
+/c exista program in S care pentru orce X, in final y va avea valoare X (f: N -> N f(x) = x orcareArFi x)
+
+/cod y <- x
+
+X - y
+  - z
+
+[A]	if x != 0 goto B
+	goto C
+
+[B]	x <- x - 1
+	Y <- y + 1
+	Z <- Z + 1		x = 0 | y = z = x initial
+
+[C]	if z != 0 goto D
+	goto E
+
+[D]	Z <- z - 1
+	X <- X + 1
+	goto C
+
+/p v <- x si V <- u
+
+/cod
+V <- 0
+[A]	if u != 0 goto B
+	goto C
+
+[B]	u <- u - 1	u -> v
+	V <- v + 1 	  -> z
+	z <- z + 1	u > 0
+			z -> u
+[C]	if z!=0 goto D
+	goto E
+
+[D]	z <- Z - 1
+	u <- u + 1
+	goto C
+
+[E]	z <- z
+
+/c Adunarea a doua numere naturale
+/p f:N X N -> N 
+
+/c (x1,x2) -> x1 + x2 = y
+/cod
+	y <- x1
+	z <- x2
+[B]	if z!= 0 goto A
+	goto E
+
+[A]	z <- z - 1
+	y <- y + 1
+	goto B
+
+/c z <- z1 + z2
+/cod 
+	u <- z1
+	v <- z2
+[B]	if v != 0 goto A
+	goto E
+
+[A]	u <- u + 1
+	v <- v - 1
+	goto B
+
+[E] 	z <- u
+
+/c Produsul a doua numere naturale
+/cod
+	z <- x2
+[B]	if z != 0 goto A
+	goto E
+
+[A]	z <- z - 1
+	y <- y + x1
+	goto B
+
+/p z <- z1 * z2
+/cod
+	u <- 0
+	v <- z2
+[B]	daca v != 0 goto A
+	goto B
+
+[A]	v <- v
+	u <- u + z1
+	goto B
+
+[E]	z <- u
+
+
+/p functie calculabila --- transformata ---> macro instructiune
+
+/c f(x1,x2) == 	{x1 - x2 daca x1 >= x2
+		{ upArrow (definit) daca x1 < x2
+
+/cod
+	y < x1
+	z <- z2
+
+[C]	if(z != 0 goto A
+	goto E
+
+[A]	if y != 0 goto B	y = 0 si z != 0
+	goto A
+
+[B]	y <- y - 1
+	z <- z - 1
+	goto C
+
+/p Exemplu
+
+/tb
+|- y | z -|
+|- 3 | 2 -|
+|- 2 | 1 -|
+|- 1 | 0 -|
+
+/tb
+|- y | z -|
+|- 2 | 3 -|
+|- 1 | 2 -|
+|- 0 | 1 -|
+|- programul nu se termina <br> (ciclu infinit) | nimic -|
+
+/def Pentru orce functie calculabila F(x1, ... ,xk) pot introduce macroinstructiunea z <- f(z1, ... ,zk)
+
+/def Predicat este o functie f: N ^ k -> {0 , 1}
+/cod
+	z <- P(z1, ... , zn)
+	if z!= 0 goto L
+	
+/p caz particular
+/cod P(x) = 	{1 cand x = 0
+		{0 cand x != 0
+
+if P(x) != 0 goto L
+

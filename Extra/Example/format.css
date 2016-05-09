@@ -1,0 +1,311 @@
+.wrapper-style-1
+{
+    display : block;
+    text-align : center;
+    position : relative;
+    margin-left : 0px ;
+    margin-right : 0px ;
+    margin-top : 0px ;
+    margin-bottom : 0px ;
+    padding-left : 0px ;
+    padding-right : 0px ;
+    padding-top : 0px ;
+    padding-bottom : 0px ;
+    z-index :9; 
+    border-style : inherit;
+    border-color : inherit;
+    border-width : 0.0px 0.0px 0.0px 0.0px ;
+    border-collapse : collapse ;
+    box-shadow : 0px 0px 3px 3px rgba(0,0,0,0.45) ;
+    background-color :#00B0FF;
+}
+.style-1
+{
+    display : inline-block;
+    text-align : center;
+    position : relative;
+    margin-left : 20px ;
+    margin-right : 20px ;
+    margin-top : 20px ;
+    margin-bottom : 20px ;
+    padding-left : 5px ;
+    padding-right : 5px ;
+    padding-top : 5px ;
+    padding-bottom : 5px ;
+    z-index :1; 
+    font-size : 2.1875em ;
+    font-family : Roboto Mono , sans-serif ;
+    font-weight : normal ;
+    color : white;
+    border-style : inherit;
+    border-color : inherit;
+    border-width : 0.0px 0.0px 0.0px 0.0px ;
+    border-collapse : collapse ;
+    box-shadow : 0px 0px 0px 0px black ;
+    background-color :initial;
+}
+.wrapper-style-2
+{
+    display : block;
+    position : relative;
+    margin-left : 0px ;
+    margin-right : 0px ;
+    margin-top : 0px ;
+    margin-bottom : 0px ;
+    padding-left : 0px ;
+    padding-right : 0px ;
+    padding-top : 0px ;
+    padding-bottom : px ;
+    z-index :8; 
+    border-style : solid;
+    border-color : #DDDDDD;
+    border-width : 1.0px 0.0px 1.0px 0.0px ;
+    border-collapse : collapse ;
+    box-shadow : 0px 0px 0px 0px black ;
+    background-color :#512DA8;
+}
+.style-2
+{
+    display : inline-block;
+    position : relative;
+    margin-left : 50px ;
+    margin-right : 0px ;
+    margin-top : 15px ;
+    margin-bottom : 15px ;
+    padding-left : 0px ;
+    padding-right : 0px ;
+    padding-top : 0px ;
+    padding-bottom : 0px ;
+    z-index :1; 
+    font-size : 1.0em ;
+    font-family : Roboto Mono , sans-serif ;
+    font-weight : normal ;
+    color : white;
+    border-style : Solid;
+    border-color : #DFDFDF;
+    border-width : 0.0px 0.0px 0.0px 0.0px ;
+    border-collapse : collapse ;
+    box-shadow : 0px 0px 0px 0px black ;
+    background-color :initial;
+}
+.wrapper-style-3
+{
+    display : block;
+    position : relative;
+    margin-left : 0px ;
+    margin-right : 0px ;
+    margin-top : 0px ;
+    margin-bottom : 0px ;
+    padding-left : 0px ;
+    padding-right : 0px ;
+    padding-top : 0px ;
+    padding-bottom : 0px ;
+    z-index :1; 
+    border-style : inherit;
+    border-color : inherit;
+    border-width : 0.0px 0.0px 0.0px 0.0px ;
+    border-collapse : collapse ;
+    box-shadow : 0px 0px 0px 0px black ;
+    background-color :initial;
+}
+.style-3
+{
+    display : inline-block;
+    position : relative;
+    margin-left : 25px ;
+    margin-right : 0px ;
+    margin-top : 0px ;
+    margin-bottom : 0px ;
+    padding-left : 0px ;
+    padding-right : 0px ;
+    padding-top : 0px ;
+    padding-bottom : 0px ;
+    z-index :1; 
+    font-size : 1.0em ;
+    font-family : Roboto Mono , sans-serif ;
+    font-weight : normal ;
+    color : null;
+    border-style : Solid;
+    border-color : #DFDFDF;
+    border-width : 0.0px 0.0px 0.0px 0.0px ;
+    border-collapse : collapse ;
+    box-shadow : 0px 0px 0px 0px black ;
+    background-color :initial;
+}
+.wrapper-style-6
+{
+    display : block;
+    position : relative;
+    margin-left : 0px ;
+    margin-right : 0px ;
+    margin-top : 0px ;
+    margin-bottom : 0px ;
+    padding-left : 0px ;
+    padding-right : 0px ;
+    padding-top : 0px ;
+    padding-bottom : 0px ;
+    z-index :1; 
+    border-style : inherit;
+    border-color : inherit;
+    border-width : 0.0px 0.0px 0.0px 0.0px ;
+    border-collapse : collapse ;
+    box-shadow : 0px 0px 0px 0px black ;
+    background-color :initial;
+}
+.style-6
+{
+    display : inline-block;
+    position : relative;
+    margin-left : 25px ;
+    margin-right : 0px ;
+    margin-top : 0px ;
+    margin-bottom : 0px ;
+    padding-left : 0px ;
+    padding-right : 0px ;
+    padding-top : 0px ;
+    padding-bottom : 0px ;
+    z-index :1; 
+    font-size : 1.0em ;
+    font-family : Roboto Mono , monospace ;
+    font-weight : normal ;
+    color : null;
+    border-style : Solid;
+    border-color : #DFDFDF;
+    border-width : 0.0px 0.0px 0.0px 0.0px ;
+    border-collapse : collapse ;
+    box-shadow : 0px 0px 0px 0px black ;
+    background-color :initial;
+}
+.wrapper-style-7
+{
+    display : block;
+    position : relative;
+    margin-left : 0px ;
+    margin-right : 0px ;
+    margin-top : 0px ;
+    margin-bottom : 0px ;
+    padding-left : 0px ;
+    padding-right : 0px ;
+    padding-top : 0px ;
+    padding-bottom : 0px ;
+    z-index :1; 
+    border-style : inherit;
+    border-color : inherit;
+    border-width : 0.0px 0.0px 0.0px 0.0px ;
+    border-collapse : collapse ;
+    box-shadow : 0px 0px 0px 0px black ;
+    background-color :white;
+}
+.style-7
+{
+    display : inline-block;
+    position : relative;
+    margin-left : 25px ;
+    margin-right : 0px ;
+    margin-top : 5px ;
+    margin-bottom : 5px ;
+    padding-left : 5px ;
+    padding-right : 5px ;
+    padding-top : 5px ;
+    padding-bottom : 5px ;
+    z-index :1; 
+    font-size : 1.0em ;
+    font-family : Roboto Mono , sans-serif ;
+    font-weight : normal ;
+    color : #512DA8;
+    border-style : solid;
+    border-color : #512DA8;
+    border-width : 0.0px 0.0px 0.0px 2.0px ;
+    border-collapse : collapse ;
+    box-shadow : 0px 0px 0px 0px black ;
+    background-color :white;
+}
+.wrapper-style-4
+{
+    display : block;
+    position : relative;
+    margin-left : 0px ;
+    margin-right : 0px ;
+    margin-top : 0px ;
+    margin-bottom : 0px ;
+    padding-left : 0px ;
+    padding-right : 0px ;
+    padding-top : 0px ;
+    padding-bottom : 0px ;
+    z-index :1; 
+    border-style : inherit;
+    border-color : inherit;
+    border-width : 0.0px 0.0px 0.0px 0.0px ;
+    border-collapse : collapse ;
+    box-shadow : 0px 0px 0px 0px black ;
+    background-color :initial;
+}
+.style-4
+{
+    display : inline-block;
+    position : relative;
+    margin-left : 25px ;
+    margin-right : 0px ;
+    margin-top : 0px ;
+    margin-bottom : 0px ;
+    padding-left : 0px ;
+    padding-right : 0px ;
+    padding-top : 0px ;
+    padding-bottom : 0px ;
+    z-index :1; 
+    font-size : 1.0em ;
+    font-family : Roboto Mono , sans-serif ;
+    font-weight : normal ;
+    color : null;
+    border-style : Solid;
+    border-color : #DFDFDF;
+    border-width : 0.0px 0.0px 0.0px 0.0px ;
+    border-collapse : collapse ;
+    box-shadow : 0px 0px 0px 0px black ;
+    background-color :initial;
+}
+.wrapper-style-5
+{
+    display : block;
+    position : relative;
+    margin-left : 0px ;
+    margin-right : 0px ;
+    margin-top : 0px ;
+    margin-bottom : 0px ;
+    padding-left : 0px ;
+    padding-right : 0px ;
+    padding-top : 0px ;
+    padding-bottom : 0px ;
+    z-index :1; 
+    border-style : inherit;
+    border-color : inherit;
+    border-width : 0.0px 0.0px 0.0px 0.0px ;
+    border-collapse : collapse ;
+    box-shadow : 0px 0px 0px 0px black ;
+    background-color :initial;
+}
+.style-5
+{
+    display : inline-block;
+    position : relative;
+    margin-left : 25px ;
+    margin-right : 0px ;
+    margin-top : 0px ;
+    margin-bottom : 0px ;
+    padding-left : 0px ;
+    padding-right : 0px ;
+    padding-top : 0px ;
+    padding-bottom : 0px ;
+    z-index :1; 
+    font-size : 1.0em ;
+    font-family : Roboto Mono , sans-serif ;
+    font-weight : normal ;
+    text-align : center ;
+    color : null;
+    border-style : Solid;
+    border-color : #DFDFDF;
+    border-width : 0.0px 0.0px 0.0px 0.0px ;
+    border-collapse : collapse ;
+    box-shadow : 0px 0px 0px 0px black ;
+    background-color :initial;
+}

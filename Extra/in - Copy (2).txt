@@ -1,0 +1,76 @@
+/def Paritatea functiei f: N^K -> ... ested data de K
+
+/p P1 daca h, g = calculabile => f(x1, ... , xn) = h(g(x1 ,... , xn), ... , (g)(x1, ... ,xn)) = calculabila
+/def Compunerea de functii calculabile duce la functii calculabile
+
+z1 <- g1(x1, ... ,xn)
+...
+zk <- g2(x1, ... ,xn)
+y <- f(z1, ... Zn)
+
+/p P2 
+/p h(x1, ...  , xn, 0) = f(x1, ... , xn)
+/p h(x1, ...  , xn, t+1) = g(x1, ... , xn, t)
+/p paritatea lui h = n+1
+/p paritatea lui g = n+2
+
+/p daca f, g sunt calculabile => h calculabila
+
+y <- f(x1, ... ,xn)
+
+/cod
+[A]	if(xn+1 = 0) goto E
+	y <- g(x1, ... , xn , t, y)
+	x _ X+1 <- x _ x+1 - 1
+	goto A
+[E] y <- y
+
+/def Functiile calculabile pentru care se aplica acest tip de recursivitate conduc tot la
+functii calculabile
+
+/tbl
+Pentru h(0) = k
+Pentru h(t + 1) = g(t, h(t))
+|
+h(x, 0) = f(x)
+h(x, t) = g(x, t, h(n, t))
+
+/c f(n) = n!
+/cod
+h(0) = 1
+h(t+1) = (t+1) * h(t)
+g(x1 , x2) = (x1 + 1) * x2
+
+/c f(x) = x1 ^ x2
+/cod
+h(x, 0) = 1
+h(x, t+1) = h(x, t) * x1;
+g(x1,x2,x3) = x1 * x3
+
+/c
+/tb
+f(x1, x2) = x1 - x2 || = {x1 -x2 pt x1 >= x2
+                         { 0 daca pt
+f(x1 , x2) = |x1 - x2| || f(x1, x2) = (x1 - x2) + x2 - x1
+alpha (x) = {1 daca x = 0
+            {0 daca x > 0
+
+/p Predicatul "=" P(x1, x2) = {1 daca x1 = x2
+                              {0 altfel
+/cod
+P(x1,x2) = alpha (|x1 - x2|)
+P(x1,x2) = 1 daca x1 = x2
+P(x1,x2) = |x1 - x2| > 0 , alpha (x1 - x2) = 0 daca x1 != x2
+
+/p Predicatul "<=" P(x1,x2) = {1 daca x1 <= x2
+                              {0 altfel
+
+P(x1,x2) = alpha (|x1 - x2|)
+P(x1, x2) = 1 pt x1 <= x2
+P(x1, x2) = 2 daca x1 > x2 & alpha = 0
+
+/p P, Q predicate calculabile = predicate calc "si"
+/cod
+-mnot P = alpha o P
+P & Q = P * Q
+P || Q = (-mnot P & -mnot Q)
