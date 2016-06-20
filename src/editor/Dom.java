@@ -80,19 +80,6 @@ public class Dom
 	{
 		String returnVal = "";		
 		
-		/*
-		if(format.getCenteredDom())
-		{
-			returnVal += createContainerDiv("");
-		}
-		else
-		{
-			if(format.getNewLine())
-			{
-				returnVal += createContainerDiv("display : block");
-			}
-		}
-		*/
 		if(format.getNewLine())
 		{
 			returnVal += createContainerDiv("display : block");
@@ -123,19 +110,7 @@ public class Dom
 		returnVal += text.toString();
 		
 		returnVal += "</" + format.getDomTag() +">\n";
-		/*
-		if(format.getCenteredDom())
-		{
-			returnVal += "</div>\n";
-		}
-		else
-		{
-			if(format.getNewLine())
-			{
-				returnVal += "</div>\n";
-			}
-		}
-		*/
+		
 		returnVal += "</div>\n";
 		return returnVal;
 	}

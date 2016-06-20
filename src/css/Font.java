@@ -117,16 +117,17 @@ public class Font implements CSS
 		
 		strings.add("font-size : " + size/16 + "em ;");
 		
+		StringBuilder builder = new StringBuilder();
 		
+		builder.append("font-family: ");
 		if(fontFamily != "")
 		{
-			strings.add("font-family : " + fontFamily + ";");
+			builder.append(fontFamily);
 		}
-		else
-		if(fontGeneric != null)
-		{
-			strings.add("font-family : " + fontGeneric + ";");
-		}
+		builder.append(", "+ fontGeneric);
+		builder.append(";");
+		
+		strings.add(builder.toString());
 		
 		if(bold)
 		{

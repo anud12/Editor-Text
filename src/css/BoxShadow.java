@@ -69,7 +69,16 @@ public class BoxShadow implements CSS
 	public List<String> getCSS()
 	{
 		List<String> lines = new LinkedList();
-		lines.add("box-shadow : " + hShadow + "px " + vShadow + "px " + blurDistance + "px " + spreadSize + "px " + color + " ;");
+		StringBuilder builder = new StringBuilder();
+		builder.append("box-shadow : ");
+		builder.append(hShadow + "px ");
+		builder.append(vShadow + "px ");
+		builder.append(blurDistance + "px ");
+		builder.append(spreadSize + "px ");
+		builder.append(color);
+		
+		lines.add(builder.toString());
+		
 		return lines;
 	}
 

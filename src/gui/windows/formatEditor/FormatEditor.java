@@ -262,6 +262,11 @@ public class FormatEditor
 		footer.setBorder(null);
 		footer.setRequestFocusEnabled(false);
 		footer.setMinimumSize(new Dimension(150, 0));
+		footer.setLayout(new BorderLayout(0, 0));
+		
+		JLabel lblRealizatDeCrihan = new JLabel("Realizat de Crihan Alexandru");
+		lblRealizatDeCrihan.setAlignmentX(Component.CENTER_ALIGNMENT);
+		footer.add(lblRealizatDeCrihan, BorderLayout.WEST);
 		
 		JPanel panel_13 = new JPanel();
 		panel_12.add(panel_13, BorderLayout.EAST);

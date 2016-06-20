@@ -89,8 +89,6 @@ public class Reader
 		
 		returnVal.append("<head>\n");
 		
-		
-		
 		//Style
 		
 		returnVal.append("<style>\n");
