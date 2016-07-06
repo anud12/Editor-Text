@@ -2,7 +2,9 @@ package editor;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.LinkedHashSet;
+import java.util.Map.Entry;
 import java.util.Set;
 
 import javax.xml.bind.annotation.XmlElement;
@@ -72,6 +74,15 @@ public class Library
 		{
 			format.setID("style-" + ids++);
 			formats.put(format.getTag(), (Format) format);
+		}
+	}
+	public void setFormatKeys()
+	{
+		ids = 0;
+		Iterator<Entry<String, Format>> iterator = formats.entrySet().iterator();
+		while(iterator.hasNext())
+		{
+			iterator.next().getValue().setID("style-" + ids++);
 		}
 	}
 	public boolean isTag(String text)

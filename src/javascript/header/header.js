@@ -18,14 +18,14 @@ function onScrollHeader(element)
         return(ascii);
     }
 
-    var div = element;
+    var div = document.getElementById(element);
     var divID ="" + div.getAttribute('id');
     var wrapperDiv = document.getElementById("wrapper-" + div.getAttribute('id'));
     var wrapperChildsDiv = document.getElementById("wrapper-childOf-" + div.getAttribute('id'));
     var childs = document.getElementById("childOf-" + divID);
     var format = div.getAttribute('format');
 
-    var domPosition = element.getBoundingClientRect().top;
+    var domPosition = div.getBoundingClientRect().top;
     
     var fireOn = true;
     var fireOff = true;

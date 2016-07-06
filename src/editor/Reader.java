@@ -1,6 +1,7 @@
 package editor;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.ListIterator;
@@ -21,13 +22,20 @@ public class Reader
 	{
 		library.setDefaultFormat("/p");
 		LinkedList<Dom> returnDoms = new LinkedList<>();
-		String[] chunks = text.split(" ");
 		
 		Dom currentDom = new Dom("first");
 		Format currentFormat = library.getDefault();
-		for(int i = 0; i < chunks.length ; i++)
+		
+		LinkedList<String> chunks = new LinkedList<>();
+		chunks.addAll(Arrays.asList(text.split(" ")));
+		
+		Iterator<String> iterator = chunks.iterator();
+		
+		int i = -1;
+		while(iterator.hasNext())
 		{
-			String chunk = chunks[i];
+			i++;
+			String chunk = iterator.next();
 			
 			if(library.isTag(chunk))
 			{
@@ -90,6 +98,8 @@ public class Reader
 		returnVal.append("<head>\n");
 		
 		//Style
+		
+		library.setFormatKeys();
 		
 		returnVal.append("<style>\n");
 		Iterator<Format> formatIterator = library.getUsedFormats().iterator();

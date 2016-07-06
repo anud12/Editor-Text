@@ -76,6 +76,7 @@ public class BoxShadow implements CSS
 		builder.append(blurDistance + "px ");
 		builder.append(spreadSize + "px ");
 		builder.append(color);
+		builder.append(";");
 		
 		lines.add(builder.toString());
 		

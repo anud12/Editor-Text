@@ -2,8 +2,10 @@ package gui.windows.formatEditor.events;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
@@ -33,21 +35,25 @@ public class FormatFileEvent implements ActionListener
 		{
 			
 			Scanner scanner;
+			BufferedReader reader;
 			try
 			{
 				File selectedFile = chooser.getSelectedFile();
 				
+				reader = new BufferedReader(new FileReader(selectedFile));
 				scanner = new Scanner(selectedFile);
-				String string = "";
+				StringBuilder string = new StringBuilder();
 				
 				Library library = editor.getFormatLibrary();
 				
-				while(scanner.hasNextLine())
+				String line = "";
+				while((line = reader.readLine()) != null)
 				{
-					String line = scanner.nextLine();
-								
-					string += line + " \n ";
+					System.out.println(line);
+					
+					string.append(line + " \n ");
 				}
+				reader.close();
 				
 				String path = selectedFile.getAbsolutePath().substring(0, selectedFile.getAbsolutePath().lastIndexOf("."));
 				path += "\\" + selectedFile.getName().substring(0, selectedFile.getName().lastIndexOf(".")) + ".html";
@@ -58,7 +64,7 @@ public class FormatFileEvent implements ActionListener
 				
 				FileWriter stream = new FileWriter(file);
 				
-				stream.write(editor.getFormatLibrary().getReader().process(string));
+				stream.write(editor.getFormatLibrary().getReader().process(string.toString()));
 				stream.flush();
 				stream.close();
 			}
