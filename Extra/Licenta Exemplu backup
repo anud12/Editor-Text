@@ -1,0 +1,62 @@
+/c 1.Introducere
+/sc Importanta aplicatiei
+/imp Aplicatia este dezvoltata pentru persoanele care vor sa isi scrie informatii intr-un mod determinist . 
+/t Aplicatia este construita in ideea de a oferii urmatoarele functionalitati :
+/t 1.Suport la nivel de alineat si paragraf
+/t 2.Procesare a formatului este independent de continutul textului
+/t 3.Optiuni de formatare ce pot fi particularizate pentru fiecare utilizator
+/t Aceste functionalitati au rolul de a usura si automatiza modul in care textul este vizualizat de catre utilizator intr-un mod eficient.
+/sc Avantajele si dezavantajele aplicatiei
+/t Alte aplicatii pe piata se pot categoriza in 2 tipuri, Procesoarele Word si Editoare simple de text. 
+/imp Fata de Procesoarele Word aplicatia ofera o suita asemanatoare de functionalitati, accentul fiind pus pe existenta fisierelor sursa si fisierelor formatate. 
+/t Astfel nu exista o legatura unitara intre text si informatia de formatare, astfel incat modul in care este reprezentata informatia se poate schimba pastrand continutul textului neschimbat.
+/t Dezavantajul consta intr-o suita mai restransa de functionalitati, si o cunostinta a limbajului dupa care se va formata textul, astfel creandu-se o nevoie initiala de cunostinte si o bariera de intrare.
+/t Fata de Editoarele simple de text, aplicatia se bazeaza pe informatia si textul scris prin intermediul acestor programe, avand ca proiectul sa fie urmatorul pas in realizarea unui document, fiind necesar doar adaugari de marcaje de formatare.
+/t Avantajul consta in oferirea usurintei de utilizare, un format usor si eficient.
+/t Dezavantajul este acela ca nu ofera suport pentru decoratiuni particulare ale paragrafelor, formatare  si pozitionare automata
+/sc Principalul obiectiv
+/t Aplicatia incearca sa se pozitioneze la jumatatea nivelului intre Procesoarele Word si Editoarele simple de text, oferind functionalitati similare cu cele a procesoarelor Word, si usurinta de formatare in timpul scrierii textului asemanator cu Editoarele simple de text, astfel fiind doar un pas urmator folosirii unui Editor simplu de text.
+/c 2.Paradigme de programare folosite
+/sc Programarea procedurala, algoritmi folositi
+/imp Programarea procedurala este o paradigma de programare derivata din programarea structurata bazata pe conceptul de apel al unei proceduri. Procedurile astfel denumite si rutine, subrutine sau functii (a nu se confunda cu functiile matematice, dar similare celor folosite in programarea functionala).
+/t Scopul programarii procedurale este acela de a sparge sarcinile intri colectie de variabile, structuri de date si subrutine, unde  in programarea orientata pe obiect este de a le sparge in obiecte ce au comportament si informatie folosind interfete 
+/t Cea mai importanta diferenta intre cele doua este aceea ca in programarea procedurala se foloseste proceduri pentru a opera structurile de data, unde in programarea orientata pe obiecte aceste doua elemente sunt unite intr-un obiect ce este o instanta a unei clase ce opereaza pe o structura de data proprie.
+/t Programarea procedurala este si programare imperativa, deoarece aplica referinte explicite catre stadiul executiei Aceasta poate sa fie orice legat de variabile ( ce poate sa corespunda registrele procesoarelor) pana la pozitia „turtle” in limbajul Logo.
+/sc Programarea orientata pe obiecte
+/imp Programarea orientata pe obiect este o paradigma bazata pe conceptul de obiecte care pot sa contina informatie, sub forma de „filed-uri” mai colocvial numite atribute, si functionalitati denumite metode. O functionalitate a obiectelor este aceea ca procedurile pot sa acceseze si de multe ori modifica atributele obiectelor cu care au fost asociate (obiectele au notiunea de „this” ce inseamna obiectul curent).
+/t In Programarea orientata pe obiecte programele sunt concepute in interactionarea obiectelor intre ele. In limbajele orientate pe obiect exista o diversificare semnificativa, dar cele mai populare sunt cele care se bazeaza pe clase, ceea ce inseamna ca obiectele sunt instante de clase, ce determina tipul lor
+/t Majoritatea limbajelor de programare folosite sunt limbaje ce ofera programare multi-paradim ce suporta programarea orientata pe obiect la intr-o masura mai mult sau mai putin completa, in general in combinatie cu programarea imperativa si procedurala.
+/t Programarea orientata pe obiect foloseste obiecte, dar nu toate tehnicile si structurile asociate sunt suportate direct in limbajele ce sustin ca suporta orientarea catre obiect. Caracteristicile fata de programarea procedurala sunt :
+/t Clasele – definita pentru un format de date si procedurile disponibile pentru un tip de obiect sau de clasa. Poate sa mai contina informatie si proceduri (denumite metode), de exemplu Clasele contin atribute si metode
+/t Obiecte – instante de clase ce de obicei au conotatie cu lumea reala, de exemplu un program grafic au obiecte cum ar fi „cerc”, „patrat”, „meniu”.  Un sistem online de comert pot avea obiecte de tipul „carucior”, „client”, „produs”. Uneori obiectele pot sa reprezinte entitati abstracte, cum ar fi un obiect ce reprezinta un fisier deschis, sau un obiect ce ofera servicii de traducerea informatiei dintr-un sistem standard in altul.
+/t Variabile de clasa – apartin clasei ca si intreg, exista doar o singura copie pentru fiecare
+/t Variabile de instanta (atribute) – informatie ce apartine obiectelor individuale, fiecare obiect ce are o copie dupa fiecare.
+/t Variabile membre – se refera la variabilele de clasa si de instanta care sunt definite de o clasa particulara
+/t Metode de clasa – apartin clasei ca si intreg, si au acces la variabilele de instanta si argumentele procedurii
+/t Metodele de instanta – aparting obiectelor individuale si au acces la variabilele de instante pentru obiecte specifice.
+/c 4.Integrarea tehnologiilor pentru formatarea textelor
+/sc Java		
+/imp Java este un limbaj de programare orientat pe obiect, concurent, bazat pe clase, si gandit pentru a avea cat mai putine legaturi cu implementarea. Este intentionat in principiul „scrii odata, rulezi peste tot”, insemnand faptul ca codul poate sa ruleze pe toate platformele care suporta Java fara a fi nevoie de recompilare. 
+/t Aplicatiile Java sunt compilate in cod binar care va fi rulat de masina virtuala Java, ne tinand cont de arhitectura calculatorului. Initial Java a fost dezvoltat de James Gosling la Sun Microsystems si lansat in 1995 ca si o componenta de baza a platformei Java. Sintaxa limbajului deriva  in mare parte din C si C++ dar are mai putine facilitati de nivel scazut fata de amandoua
+/t Initial implementarea de referinta a compilatorului Java, masina virtuala si libraria de clase au fost lansate de Sun sub o licenta proprietara. Din Mai 2007 cu specificarile din Java Community Process, Sun relicentiaza majoritatea tehnologiilor Java sub GNU General Public Licence si au dezvoltat implementari alternative ale tehnologiilor Sun, cum ar fi compilatorul GNU pentru Java, GNU Classpath (librariile standard), si IcedTea-Web (plugin pentru navigatorul web).
+Ultima versiune este Java 8 ce este singura versiune care este suportata fara nici un cost de Oracle, in ciuda faptului a versiunile anterioare erau suportat de Oracle si alte companii comerciale.
+/t Un scop al limbajului este portabilitate, ce inseamna ca programele scrise pentru platforma Java trebuie sa ruleze similar pe fiecare combinatie de componente si sistemele operare cu un suport adecvat Acest lucru este posibil prin compilarea codului Java intr-o reprezentare intermediara numita Java bytecode, in loc sa fie un cod masina specific unei arhitecturi.
+/t Instructiunile Java sunt asemanatoare cu codul masina dar sunt intentionate sa fie executate de o masina virtuala scrisa specific pentru componentele pe care ruleaza Utilizatorii folosesc Java Runtime Environment (JRE) instalat pe masinile lor pentru aplicatii Java, sau intr-un navigator web pentru Java applet.
+/t Librariile standard pun la dispozitie o modalitate generica de acces al functionalitati cum ar fi grafica, retelistica si concurenta.
+Folosirea codului universal creste usurinta portarii. In schimb efortul in plus pentru interpretarea bytecode-ului in instructiuni de cod masina, face ca programele interpretate in marea majoritatea cazurilor sa ruleze mai incet decat cele executate nativ.
+/t Pe de alta parte, compilatoarele just-in-time (JIT) care compileaza bytecode-ul in cod masina pe parcursul rularii au fost introduse intr-un stadiu de inceput Java in sine nu depinde de platforma, si este adaptat catre platforma pe care ruleaza de o masina virtuala Java.
+/t Structura proiectului consta in separarea codului in pachete dupa tehnologia sau rolul ce are sa o dezvolte.
+/t Pachetele sunt:
+/t css – ce are ca rol dezvoltarea claselor de legatura cu tehnologia Cascading Style Sheets
+/t editor – ce are ca rol functionalitatea editorului
+/t JavaScript – ce are ca rol dezvoltarea claselor de legatura cu tehnologia JavaScript, si fiecare sub-pachet contine o functionalitate
+/t gui – ce contine sursele pentru interfata grafica
+/t windows – ce contine sub-pachetele ferestrelor
+/t formatEditor – fereastra de modificare a formatelor
+/t events – pachetul ce gestioneaza inregistreaza, si executa evenimentele ferestrei formatEditor
+/t panels – pachetul ce contine panourile folosite in fereastra formatEditor
+/t decorator – panoul ce ofera optiuni catre clasa Decorator din pachetul css
+/t decoratorWrapper – panou ce ofera optiuni de tipul Decorator din pachetul css pentru clasa ambalatoare
+/t postion – panou ce ofera optiuni catre clasa Position din pachetul css
+/t positionWrapper – panou ce ofera optiuni de tipul Position din pachetul css pentru clasa ambalatoare
+/t TextReplacerPanel – panou ce ofera optiuni de tipul TextReplacer din pachetul editor
